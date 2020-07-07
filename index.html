@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <title>\m/ HELL QUEST \m/</title>
+
+	<script>
+	
+alert("You are on a mission to break out Brutus, Cassius and Judas from the 9th circle of Hell! Answer the questions correctly in each level to descend further, but beware that you do not answer incorrectly! Press 1, 2 or 3 to begin.");
+
+function EvalSound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.Play();
+}
+
+function StopSound(soundobj) {
+ var thissound=document.getElementById(soundobj);
+  thissound.Stop();
+}
+
+window.addEventListener("keydown", onKeyDown, false);
+window.addEventListener("keyup", onKeyUp, false);
+
+function onKeyDown(e) {
+	switch(e.keyCode) {
+		case 49: {
+			changeScene(1);
+			}
+			break;
+		case 50: {
+			changeScene(2);
+			}
+			break;
+		case 51: {
+			changeScene(3);
+			}	
+			break;
+	}
+}
+
+</script>
+
+<embed src="ibreathespears.mp3" autostart=false width=1 height=1 loop="true" id="sound1"
+enablejavascript="true">
+
+	<script type="text/javascript">
+
+      // Starting at intro scene
+      var curScene = 0;
+		
+      function changeScene(decision) {
+        // Clears the message
+        var message = "";
+
+		
+		switch (curScene) {
+        case 0:
+          curScene = 1;
+          message = "You find yourself in Limbo. Who wrote the Divine Comedy? 1. Dante, 2. Homer, 3. Pontius Pilate";
+          break;
+        case 1:
+          if (decision == 1) {
+            curScene = 2;
+            message = "Correct! You are in the level of Lust. Strong winds blow, and the restless are blown about. Besides Cleopatra, who else does Dante say resides here? 1. Brave Sir Robin, 2. Attila the Hun, 3. Helen of Troy";
+          }
+          else if (decision == 2) {
+            curScene = 10;
+            message = "You fell into a lake of fire and your skin burned off.";
+          }
+		  else if (decision == 3) {
+			curScene = 13;
+			message = "You have been ripped to shreds.";
+		}
+			break;
+		case 2:
+		   if (decision == 1) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+			else if (decision == 2) {
+			curScene = 11;
+			message = "A demon ate you for your ignorance.";
+		}
+			else if (decision == 3) {
+			curScene = 3;
+			message = "Right again! You are in the level of Gluttony. The beast Cerberus stands before you. How did the Roman poet Virgil get past this beast? 1. Tempted it with meat, 2. Stuffed its mouths with mud, 3. Threw a very large stick";
+		}
+            break;
+		case 3:
+		  if (decision == 1) {
+			curScene = 13;
+			message = "You have been ripped to shreds.";
+		}
+			else if (decision == 2) {
+			curScene = 4;
+			message = "You're getting good at this. This is the land of Greed. There are two groups here: those who hoarded material possessions, and those who squandered them. They spend centuries trying to push gold up the hill, jousting each other with the heavy burdens. Who guards these two groups? 1. Pluto, 2. The Norns, 3. Oni";
+		}
+			else if (decision == 3) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+            break;
+		case 4:
+		    if (decision == 1) {
+			curScene = 5;
+			message = " Keep it up. You cross the river Styx in the level of Wrath. Restless souls fight for eternity. Beyond the marsh is the river Dis. Who threatens Dante when he tries to enter its walls? 1. The Furies, 2. Bugbears, 3. Filippo Argenti";
+		}
+			else if (decision == 2) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+			else if (decision == 3) {
+			curScene = 11;
+			message = "A demon ate you for your ignorance.";
+		}
+            break;
+          break;
+		case 5:
+		  if (decision == 1) {
+			curScene = 6;
+			message = "Closer... Heresy. The tombstones burn with a raging flame. What kind of act could make you end up in this level? 1. Killing a baby, 2. Saying 'the soul dies along with the body', 3. Stealing from the poor";
+		}
+			else if (decision == 2) {
+			curScene = 13;
+			message = "You have been ripped to shreds.";
+		}
+			else if (decision == 3) {
+			curScene = 11;
+			message = "A demon ate you for your ignorance.";
+		}
+            break;
+		case 6:
+		  if (decision == 1) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+			else if (decision == 2) {
+			curScene = 7;
+			message = "You're almost there. The Violent drown in a river of fire and blood. The Centaur quells the uprisings. Besides hurting other people, what could land you on this level? 1. Committing adultery, 2. Constructing false idols, 3. Committing suicide";
+		}
+			else if (decision == 3) {
+			curScene = 13;
+			message = "You have been ripped to shreds.";
+		}
+            break;
+		case 7:
+			if (decision == 1) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+			else if (decision == 2) {
+			curScene = 11;
+			message = "A demon ate you for your ignorance.";
+		}
+			else if (decision == 3) {
+			curScene = 8;
+			message = "You are close to the Beast. In the realm of Treachery, the Geryon flies you over the cliffs and ditches. Where are the fraudulent located? 1. The Stonehenge, 2. The Malebolge, 3. Masamune";
+		}
+            break;
+		case 8:
+          if (decision == 1) {
+			curScene = 10;
+			message = "You fell into a lake of fire and your skin burned off.";
+		}
+			else if (decision == 2) {
+			curScene = 9;
+			message = "Lucifer himself stands before you, trapped in ice. He desperately flaps his wings to try and escape. His three sets of teeth are constantly ripping in to three people. Who are in his mouths? 1. Brutus, Cassius and Judas, 2. Homer, Hades and Odysseus, 3. Hercules, Caesar, Judas";
+		}
+			else if (decision == 3) {
+			curScene = 11;
+			message = "A demon ate you for your ignorance.";
+		}
+            break;
+        case 9:
+         if (decision == 1) {
+			curScene = 12;
+			message = "You punch Lucifer in the mouth and set the trio free. You carry them back up to the surface with you and an Oracle is able to heal them. You have bested the fallen angel! Congratulations, you have beaten Hell Quest!! A very special thanks to: Sarah Whylly, Tim McCabe, Jenne Kaivo, Cory Oleson, 1349, PeL from Pixiv.net";
+		}
+			else if (decision == 2) {
+			curScene = 10;
+			message = "Why would you go up against the Devil?";
+		}
+			else if (decision == 3) {
+			curScene = 11;
+			message = "Satan stomped your face in.";
+		}
+            break;
+		case 10:
+			curScene = 0;
+		break;
+		case 11:
+			curScene = 0;
+		break;
+		case 12:
+			curScene = 0;
+			message = "Thank you for playing!";
+		break;
+		case 13:
+			curScene = 0;
+		break;
+		} 
+			
+		
+        document.getElementById("sceneimg").src = "scene" + curScene + ".gif";
+        if (message != "")
+          alert(message);
+      }
+    </script>
+  </head>
+
+  <body bgcolor="black">
+  <font color="white">
+    <div style="margin-top:100px; text-align:center"> 
+      <img id="sceneimg" src="scene0.gif" alt="METAAAAAAAAAAAL" /><br />
+      Either click a button or press a key, to make one of these decisions three:
+      <input type="button" id="decision1" value="1" onclick="changeScene(1)" />
+      <input type="button" id="decision2" value="2" onclick="changeScene(2)" />
+	  <input type="button" id="decision3" value="3" onclick="changeScene(3)" />
+    </div>
+	</font>
+  </body>
+</html>
