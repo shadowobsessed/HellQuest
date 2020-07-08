@@ -6,6 +6,19 @@
 
 alert("You are on a mission to break out Brutus, Cassius and Judas from the 9th circle of Hell! Answer the questions correctly in each level to descend further, but beware that you do not answer incorrectly! Press 1, 2 or 3 to begin.");
 
+function EvalSound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.Play();
+}
+
+function StopSound(soundobj) {
+ var thissound=document.getElementById(soundobj);
+  thissound.Stop();
+}
+
+<embed src="ibreathespears.ogg" autostart=false width=1 height=1 loop="true" id="sound1"
+enablejavascript="true">
+
 window.addEventListener("keydown", onKeyDown, false);
 window.addEventListener("keyup", onKeyUp, false);
 
